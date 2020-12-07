@@ -1,0 +1,46 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  description: The title of the project
+  config:
+    required: true
+- type: text
+  name: subtitle
+  label: Subtitle
+  description: The text shown just below the project title.
+- type: text
+  name: excerpt
+  label: Excerpt
+  description: The excerpt of the page displayed in meta data.
+- type: datetime
+  name: date
+  label: Date
+  config:
+    required: true
+- type: file
+  name: thumb_image
+  label: Featured Image
+  description: The image shown in the project page.
+- type: file
+  name: image
+  label: Alternative Featured Image
+  description: The image shown in the single project.
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: project
+  config:
+    required: true
+pages:
+- portfolio/project-1.md
+- portfolio/project-2.md
+- portfolio/project-3.md
+- portfolio/project-4.md
+- portfolio/project-5.md
+- portfolio/project-6.md
+- portfolio/project-7.md

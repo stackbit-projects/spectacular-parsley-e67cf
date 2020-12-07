@@ -1,0 +1,49 @@
+---
+label: Testimonials Section
+hide_body: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  description: The title of the section.
+- type: text
+  name: section_id
+  label: Element ID
+  description: >-
+    A unique identifier that can be used when linking to this section. Must not
+    contain whitespace.
+- type: text
+  name: subtitle
+  label: Subtitle
+  description: The subtitle of the section.
+- type: select
+  name: col_number
+  label: Columns
+  description: The number of testimonials in a row.
+  default: three
+  config:
+    required: true
+    source:
+      type: custom
+    options:
+    - two
+    - three
+- type: field_group_list
+  name: testimonials
+  label: Testimonials
+  fields:
+  - type: include
+    name: include_testimonial
+    label: Testimonial
+    template: testimonial
+  config:
+    labelField: author
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: section_testimonials
+  config:
+    required: true

@@ -1,0 +1,55 @@
+---
+label: Posts Section
+hide_body: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  description: The title of the section.
+- type: text
+  name: section_id
+  label: Element ID
+  description: >-
+    A unique identifier that can be used when linking to this section. Must not
+    contain whitespace.
+- type: text
+  name: subtitle
+  label: Subtitle
+  description: The subtitle of the section.
+- type: number
+  name: posts_number
+  label: The number of posts to display.
+  default: 3
+  config:
+    required: true
+- type: select
+  name: col_number
+  label: Columns
+  description: The number of posts in a row.
+  default: three
+  config:
+    required: true
+    source:
+      type: custom
+    options:
+    - two
+    - three
+- type: field_group_list
+  name: actions
+  label: Action Buttons
+  fields:
+  - type: include
+    name: include_action
+    label: Action
+    template: action
+  config:
+    labelField: label
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: section_posts
+  config:
+    required: true

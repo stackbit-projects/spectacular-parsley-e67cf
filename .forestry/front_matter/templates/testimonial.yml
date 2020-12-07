@@ -1,0 +1,29 @@
+---
+label: Testimonial
+hide_body: true
+display_field: author
+fields:
+- type: text
+  name: author
+  label: Author
+  description: The author of the testimonial.
+  config:
+    required: true
+- type: file
+  name: avatar
+  label: Avatar
+  description: The avatar of the testimonial author.
+- type: text
+  name: content
+  label: Content
+  description: The text content of the testimonial.
+  config:
+    required: true
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: testimonial
+  config:
+    required: true

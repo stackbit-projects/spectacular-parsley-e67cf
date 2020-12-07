@@ -1,0 +1,51 @@
+---
+label: Portfolio Section
+hide_body: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  description: The title of the section.
+- type: text
+  name: section_id
+  label: Element ID
+  description: >-
+    A unique identifier that can be used when linking to this section. Must not
+    contain whitespace.
+- type: text
+  name: subtitle
+  label: Subtitle
+  description: The subtitle of the section.
+- type: select
+  name: layout_style
+  label: Layout Style
+  description: The layout style of the projects section.
+  default: mosaic
+  config:
+    required: true
+    source:
+      type: custom
+    options:
+    - mosaic
+    - tiles
+- type: number
+  name: projects_number
+  label: Number of projects to display
+  config:
+    required: true
+- type: text
+  name: view_all_label
+  label: All projects button label
+  description: The text displayed inside the button.
+- type: text
+  name: view_all_url
+  label: All projects button URL
+- type: text
+  name: type
+  label: Object Type
+  description: The type of the object
+  hidden: true
+  default: section_portfolio
+  config:
+    required: true

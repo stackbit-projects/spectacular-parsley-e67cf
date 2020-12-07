@@ -1,0 +1,47 @@
+---
+label: Post
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  description: The title of the post
+  config:
+    required: true
+- type: text
+  name: subtitle
+  label: Subtitle
+  description: The text shown just below the post title.
+- type: datetime
+  name: date
+  label: Date
+  config:
+    required: true
+- type: file
+  name: thumb_image
+  label: Featured Image
+  description: The image shown in the blog feed.
+- type: file
+  name: image
+  label: Alternative Featured Image
+  description: The image shown in the single post.
+- type: text
+  name: excerpt
+  label: Excerpt
+  description: The excerpt of the post displayed in the blog feed and in meta data.
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: post
+  config:
+    required: true
+pages:
+- blog/function-of-design.md
+- blog/games.md
+- blog/green.md
+- blog/interior-designer.md
+- blog/street-photography.md
+- blog/why-fonts-matter.md
+- blog/working-from-home.md
+- blog/workplace.md
